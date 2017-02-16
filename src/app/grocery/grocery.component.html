@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ma liste de course</title>
+    </head>
+    
+    <body>
+        
+        <!-- Ouverture de la page -->
+        <header>
+            <h1>Ma liste de course</h1>
+            <p>Système de gestion pour acheter mieux</p>
+        </header>
+
+        <!-- Contenu principal -->
+        <main>
+
+            <!-- Mon formulaire -->
+            <section>
+                <h2>Ajouter un produit</h2>
+
+                <form action="addProduct.php" method="post">
+
+                    <!-- Zone : type de produit -->
+                    <fieldset>
+                        <legend>Type de produit</legend>
+
+                        <article>
+
+                            <label for="productCategory">Catégorie</label>
+                            
+                            <select name="productCategory" id="productCategory">
+
+                                <option value="null">Sélectionner</option>
+
+                                <option value="legume">Légume</option>
+                                <option value="fruit">Fruit</option>
+                                <option value="viande">Viande</option>
+                                <option value="poisson">Poisson</option>
+                                <option value="divers">Divers</option>
+
+                            </select>
+
+                        </article>
+
+                        <article>
+
+                            <label for="productName">Nom</label>
+                            <input type="text" id="productName" placeholder="Obligatoire">
+
+                        </article>
+
+                    </fieldset>
+
+                    <!-- Zone : a propos -->
+                    <fieldset>
+                        <legend>A propos</legend>
+
+                        <article>
+
+                            <label for="productComment">Commentaire</label>
+                            <textarea name="productComment" id="productComment" placeholder="quantité, format, ..."></textarea>
+
+                        </article>
+
+                        <article>
+
+                            <label for="productOption">Option</label>
+                            <ul>
+                                <li><input type="radio" name="productOption" value="breakfast"> Petit déjeuné</li>
+                                <li><input type="radio" name="productOption" value="lunch"> Déjeuné</li>
+                                <li><input type="radio" name="productOption" value="diner"> Dîner</li>
+                                <li><input type="radio" name="productOption" value="stock"> Réserve</li>
+                            </ul>
+
+                        </article>
+
+                    </fieldset>
+
+                    <input type="submit" value="Ajouter">
+
+                </form>
+
+            </section>
+
+        </main>
+
+        <!-- Fermeture de la page -->
+        <footer>
+            <p>Under MIT Licence</p>
+        </footer>
+
+        <!-- Intégrer le JavaScript à la fin du BODY -->
+        <script src="js/script.js" ></script>
+    </body>
+
+</html>
